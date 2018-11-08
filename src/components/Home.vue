@@ -1,13 +1,12 @@
 <template>
-  <div>分类组件</div>
+  <div class="home">
+    home
+  </div>
 </template>
 
 <script>
-export default {
-
-}
+export default {}
 </script>
 
 <style>
-
 </style>
