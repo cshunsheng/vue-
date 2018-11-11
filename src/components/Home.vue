@@ -17,21 +17,21 @@
         <!-- el-menu-item 二级菜单 -->
         <!-- template 子菜单的文本 -->
         <!-- unique-opened 最多打开一个列表 -->
+        <!-- router: 开启路由模式 地址是index值 -->
         <el-menu
-          default-active="1-1"
+          default-active="users"
           class="el-menu-vertical-demo"
-          @open="handleOpen"
-          @close="handleClose"
           background-color="#545c64"
           text-color="#fff"
           active-text-color="#ffd04b"
-          unique-opened>
+          unique-opened
+          router>
           <el-submenu index="1">
             <template slot="title">
               <i class="el-icon-location"></i>
               <span>用户管理</span>
             </template>
-            <el-menu-item index="1-1">
+            <el-menu-item index="users">
               <i class="el-icon-menu"></i>
               <span slot="title">用户列表</span>
           </el-menu-item>
@@ -41,7 +41,7 @@
               <i class="el-icon-location"></i>
               <span>权限管理</span>
             </template>
-            <el-menu-item index="2-1">
+            <el-menu-item index="list">
               <i class="el-icon-menu"></i>
               <span slot="title">角色列表</span>
             </el-menu-item>
@@ -52,7 +52,9 @@
           </el-submenu>
         </el-menu>
       </el-aside>
-      <el-main>Main</el-main>
+      <el-main>
+        <router-view/>
+      </el-main>
     </el-container>
   </el-container>
 </template>
@@ -84,12 +86,6 @@ export default {
             message: '已取消退出'
           })
         })
-    },
-    handleOpen(key, keyPath) {
-      console.log(key, keyPath)
-    },
-    handleClose(key, keyPath) {
-      console.log(key, keyPath)
     }
   }
 }
@@ -131,16 +127,16 @@ export default {
   }
   // .el-container {
   //   height: 100%;
-    .el-aside {
-      background-color: #545c64;
-      // height: 100%;
-      .el-submenu {
-        width: 200px;
-      }
+  .el-aside {
+    background-color: #545c64;
+    // height: 100%;
+    .el-submenu {
+      width: 200px;
     }
-    .el-main {
-      background-color: #eaeef1;
-    }
+  }
+  .el-main {
+    background-color: #eaeef1;
+  }
   // }
 }
 </style>
