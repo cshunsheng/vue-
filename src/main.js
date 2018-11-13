@@ -9,6 +9,7 @@ Vue.config.productionTip = false
 // axios的绑定
 Vue.prototype.axios = axios
 // axios配置
+// axios.defaults.baseURL = 'http://192.168.47.35:8888/api/private/v1/'
 axios.defaults.baseURL = 'http://localhost:8888/api/private/v1/'
 // 拦截器
 // 请求拦截器：拦截请求
