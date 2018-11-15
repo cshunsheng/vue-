@@ -1,7 +1,6 @@
 <template>
-  <div class="list">
-    list组件
-
+  <div class="params">
+    params
   </div>
 </template>
 

@@ -19,7 +19,7 @@
         <!-- unique-opened 最多打开一个列表 -->
         <!-- router: 开启路由模式 地址是index值 -->
         <el-menu
-          default-active="users"
+          :default-active="$route.path.slice(1)"
           class="el-menu-vertical-demo"
           background-color="#545c64"
           text-color="#fff"
@@ -34,22 +34,8 @@
             <el-menu-item :index="level2.path" v-for="level2 in level1.children" :key="level2.id">
               <i class="el-icon-menu"></i>
               <span slot="title">{{ level2.authName }}</span>
-          </el-menu-item>
-        </el-submenu>
-          <!-- <el-submenu index="2">
-            <template slot="title">
-              <i class="el-icon-location"></i>
-              <span>权限管理</span>
-            </template>
-            <el-menu-item index="roles">
-              <i class="el-icon-menu"></i>
-              <span slot="title">角色列表</span>
             </el-menu-item>
-            <el-menu-item index="rights">
-              <i class="el-icon-menu"></i>
-              <span slot="title">权限列表</span>
-            </el-menu-item>
-          </el-submenu> -->
+          </el-submenu>
         </el-menu>
       </el-aside>
       <el-main>

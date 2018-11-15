@@ -5,7 +5,11 @@ import axios from 'axios'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import '@/assets/common.css'
+import ElTreeGrid from 'element-tree-grid'
+
 Vue.config.productionTip = false
+Vue.component(ElTreeGrid.name, ElTreeGrid)
+
 // axios的绑定
 Vue.prototype.axios = axios
 // axios配置
