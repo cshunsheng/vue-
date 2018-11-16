@@ -49,7 +49,7 @@
       </el-tab-pane>
       <el-tab-pane label="商品内容" name="content">
         <quill-editor v-model="addForm.goods_introduce"></quill-editor>
-        <el-button type="primary" @click="addGoods()">添加</el-button>
+        <el-button type="primary" @click="addGoods">添加</el-button>
       </el-tab-pane>
     </el-tabs>
   </div>
@@ -126,11 +126,18 @@ export default {
       if (status === 201) {
         console.log(status)
         this.$router.push('/goods')
+        this.$message.success('恭喜你，添加成功')
       }
     }
   }
 }
 </script>
 
-<style>
+<style lang="less" scoped>
+.quill-editor {
+  background: #fff;
+  /deep/ .ql-editor {
+    height: 300px;
+  }
+}
 </style>
