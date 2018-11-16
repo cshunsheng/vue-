@@ -6,6 +6,7 @@ import Users from '@/components/users/Users'
 import Rights from '@/components/rights/Rights'
 import Roles from '@/components/rights/Roles'
 import Goods from '@/components/products/Goods'
+import Add from '@/components/products/Add'
 import Params from '@/components/products/Params'
 import Categories from '@/components/products/Categories'
 import Orders from '@/components/orders/Orders'
@@ -41,6 +42,10 @@ const router = new Router({
         {
           path: '/goods',
           component: Goods
+        },
+        {
+          path: '/goods-add',
+          component: Add
         },
         {
           path: '/params',
